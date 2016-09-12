@@ -10,7 +10,7 @@ php bin/magento module:enable Instamojo_Imojo --clear-static-content
 php bin/magento setup:upgrade
 ```
 
-Enable and configure Stripe in Magento Admin under `Stores -> Configuration -> Payment Methods -> Instamojo Payment Gateway`.
+Enable and configure Instamojo in Magento Admin under `Stores -> Configuration -> Payment Methods -> Instamojo Payment Gateway`.
 
 ## Screenshots
 
