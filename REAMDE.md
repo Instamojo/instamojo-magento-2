@@ -14,7 +14,7 @@ Enable and configure Instamojo in Magento Admin under `Stores -> Configuration -
 
 ## Screenshots
 
-![Instamojo extension under admin](http://i.imgur.com/uj2wMZ1.gifv)
+![Instamojo extension under admin](http://i.imgur.com/uj2wMZ1.gif)
 
 ![Configuration](http://i.imgur.com/ltxylh3.png)
 
