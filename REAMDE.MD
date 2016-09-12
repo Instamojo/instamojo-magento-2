@@ -16,6 +16,15 @@ Enable and configure Stripe in Magento Admin under `Stores -> Configuration -> P
 If you do not see Razorpay in your gateway list, please clear your Magento Cache from your admin
 panel (System -> Cache Management).
 
+## Screenshots
+
+![Instamojo extension under admin](http://i.imgur.com/uj2wMZ1.gifv)
+
+![Configuration](http://i.imgur.com/ltxylh3.png)
+
+![Instamojo during checkout](http://i.imgur.com/Ayw3MnC.png)
+
+
 ## Support
 
 Send your queries to support@instamojo.com
