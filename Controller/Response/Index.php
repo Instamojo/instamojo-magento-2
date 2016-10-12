@@ -81,7 +81,7 @@ class Index extends  \Magento\Framework\App\Action\Action
 				
 				# use instamojo library
 				$ds = DIRECTORY_SEPARATOR;
-				include __DIR__."$ds..$ds..$ds/lib/instamojo.php";
+				include __DIR__ . "$ds..$ds..$ds/lib/Instamojo.php";
 				$api = new \Instamojo($client_id,$client_secret,$testmode);
 				
 				# fetch transaction status from instamojo.

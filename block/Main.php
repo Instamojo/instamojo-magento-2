@@ -99,7 +99,7 @@ class Main extends  \Magento\Framework\View\Element\Template
 				$api_data['redirect_url'] = $this->urlBuilder->getUrl("instamojo/response");
 				$this->logger->info("Date sent for creating order ".print_r($api_data,true));
 				$ds = DIRECTORY_SEPARATOR;
-				include __DIR__."$ds..$ds/lib/instamojo.php";
+				include __DIR__ . "$ds..$ds/lib/Instamojo.php";
 				
 				$api = new \Instamojo($client_id,$client_secret,$testmode);
 				$response = $api->createOrderPayment($api_data);
