@@ -14,15 +14,15 @@ Enable and configure Instamojo in Magento Admin under `Stores -> Configuration -
 
 ## Configuration
 
-    - **Enabled:** Mark this as "Yes" to enable this plugin.
+  - **Enabled:** Mark this as "Yes" to enable this plugin.
  
-    - **Title:** Test to be shown to user during checkout. For example: "Pay using DB/CC/NB/Wallets"
+  - **Title:** Test to be shown to user during checkout. For example: "Pay using DB/CC/NB/Wallets"
 
-    - **Checkout Label:** This is the label users will see during checkout, its default value is "Pay using Instamojo". You can change it to something more generic like "Pay using Credit/Debit Card or Online Banking".
+  - **Checkout Label:** This is the label users will see during checkout, its default value is "Pay using Instamojo". You can change it to something more generic like "Pay using Credit/Debit Card or Online Banking".
      
-    - **Client ID** and **Client Secret** - Client Secret and Client ID can be generated on the [Integrations page](https://www.instamojo.com/integrations/). Related support article: [How Do I Get My Client ID And Client Secret?](https://support.instamojo.com/hc/en-us/articles/212214265-How-do-I-get-my-Client-ID-and-Client-Secret-)
+  - **Client ID** and **Client Secret** - Client Secret and Client ID can be generated on the [Integrations page](https://www.instamojo.com/integrations/). Related support article: [How Do I Get My Client ID And Client Secret?](https://support.instamojo.com/hc/en-us/articles/212214265-How-do-I-get-my-Client-ID-and-Client-Secret-)
     
-    - **Test Mode:** If enabled you can use our [Sandbox environment](https://test.instamojo.com) to test payments. Note that in this case you should use `Client Secret` and `Client ID` from the test account not production.
+  - **Test Mode:** If enabled you can use our [Sandbox environment](https://test.instamojo.com) to test payments. Note that in this case you should use `Client Secret` and `Client ID` from the test account not production.
 
 ## Screenshots
 
