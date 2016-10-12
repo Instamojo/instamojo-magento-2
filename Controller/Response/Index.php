@@ -56,11 +56,11 @@ class Index extends  \Magento\Framework\App\Action\Action
 
 	public function execute()
 	{
-		$payment_id =$this->getRequest()->getParam('payment_id');
+		$payment_id = $this->getRequest()->getParam('payment_id');
 		$payment_request_id = $this->getRequest()->getParam('id'); 
 		$storedPaymentRequestId = $this->checkoutSession->getPaymentRequestId();
 		
-		if ($payment_id and  $payment_request_id)
+		if ($payment_id and $payment_request_id)
 		{  
 			$this->logger->info("Callback called with payment ID: $payment_id and payment request ID : $payment_request_id ");
 	  
@@ -87,7 +87,8 @@ class Index extends  \Magento\Framework\App\Action\Action
 				# fetch transaction status from instamojo.
 				$response = $api->getOrderById($payment_request_id);
 				$this->logger->info("Response from server for PaymentRequest ID $payment_request_id ".PHP_EOL .print_r($response,true));
-				$payment_status = $response->payments[0]->status;
+				$payment_status = $api->getPaymentStatus($payment_id, $response->payments);
+				$this->logger->info("Payment status for $payment_id is $payment_status");
 				
 				if($payment_status === "successful" OR  $payment_status =="failed" )
 				{
