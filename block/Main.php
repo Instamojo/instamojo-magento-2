@@ -7,7 +7,6 @@ use Magento\Checkout\Model\Session;
 use Magento\Sales\Model\Order;
 use Magento\Sales\Model\OrderFactory;
 use Instamojo\Imojo\Logger\Logger;
-use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Response\Http;
 use Magento\Sales\Model\Order\Payment\Transaction\Builder as TransactionBuilder;
 
@@ -28,7 +27,6 @@ class Main extends  \Magento\Framework\View\Element\Template
 			Session $checkoutSession,
 			OrderFactory $orderFactory,
 			Logger $logger,
-			ScopeConfigInterface $scopeConfig,
 			Http $response,
 			TransactionBuilder $tb,
 			 \Magento\AdminNotification\Model\Inbox $inbox
@@ -38,7 +36,7 @@ class Main extends  \Magento\Framework\View\Element\Template
         $this->checkoutSession = $checkoutSession;
         $this->orderFactory = $orderFactory;
         $this->response = $response;
-        $this->config = $scopeConfig;
+        $this->config = $context->getScopeConfig();
         $this->transactionBuilder = $tb;
 		$this->logger = $logger;					
 		$this->inbox = $inbox;					
