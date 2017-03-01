@@ -17,7 +17,7 @@ define(
         rendererList.push(
             {
                 type: 'instamojo',
-                component: 'Instamojo_imojo/js/view/payment/method-renderer/imojopaymentmethod-method'
+                component: 'Instamojo_Imojo/js/view/payment/method-renderer/imojopaymentmethod-method'
             }
         );
         /** Add view logic here if needed */
