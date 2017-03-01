@@ -4,7 +4,7 @@
   "type": "magento2-module",
   "homepage": "https://github.com/instamojo/instamojo-magento-2/",
   "keywords": ["instamojo", "magento", "magento 2", "plugin", "extension", "payment", "gateway"],
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": [
       "MIT"
   ],
