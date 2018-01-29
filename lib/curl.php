@@ -57,7 +57,7 @@ class Curl
 	public function setReferer($referer)
 	{
 		$this->referer = $referer;
-		curl_setopt($this->ch, CURLOPT_REFERER  , $this->referrer);
+		curl_setopt($this->ch, CURLOPT_REFERER  , $this->referer);
 		
 	}
 

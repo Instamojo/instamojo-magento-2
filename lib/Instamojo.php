@@ -79,7 +79,7 @@ Class Instamojo
 					$errors[] =$v[0];
 			}
 			if($errors)
-				throw new ValidationException("Validation Error Occured with following Errors : ",$errors,$result);
+				throw new ValidationException("Validation Error Occurred with following Errors : ",$errors,$result);
 		}
 	}
 	

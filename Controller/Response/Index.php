@@ -72,7 +72,7 @@ class Index extends  \Magento\Framework\App\Action\Action
      
 			try {
 				
-				# get Client credintials from configurations.
+				# get Client credentials from configurations.
 				$storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
 				$client_id = $this->config->getValue("payment/instamojo/client_id",$storeScope);
 				$client_secret = $this->config->getValue("payment/instamojo/client_secret",$storeScope);
@@ -123,10 +123,10 @@ class Index extends  \Magento\Framework\App\Action\Action
 							{
 								 $transaction->setTxnId($payment_id);
 								$transaction->setAdditionalInformation(  
-									"Instamojo Transactio Id",$payment_id
+									"Instamojo Transaction Id",$payment_id
 								);
 								$transaction->setAdditionalInformation(  
-									"status","successfull"
+									"status","successful"
 								);
 								$transaction->setIsClosed(1);
 								$transaction->save(); 
@@ -136,7 +136,7 @@ class Index extends  \Magento\Framework\App\Action\Action
 							
 							 $payment->addTransactionCommentsToOrder(
 								$transaction,
-							   "Transaction is completed succefully"
+							   "Transaction is completed successfully"
 							);
 							$payment->setParentTransactionId(null); 
 							
@@ -166,7 +166,7 @@ class Index extends  \Magento\Framework\App\Action\Action
 									"Instamojo Transaction Id",$payment_id
 								);
 							$transaction->setAdditionalInformation(  
-									"status","successfull"
+									"status","successful"
 								);
 							$transaction->setIsClosed(1);
 							$transaction->save();
@@ -200,12 +200,12 @@ class Index extends  \Magento\Framework\App\Action\Action
 				$this->logger->info($e);
 					$this->_redirect($this->urlBuilder->getBaseUrl());
 			}catch(ValidationException $e){
-				// handle exceptions releted to response from the server.
+				// handle exceptions related to response from the server.
 				$this->logger->info($e->getMessage()." with ");
 				# add message into inbox of admin if authorization error.
 				if(stristr($e->getMessage(),"Authorization"))
 				{
-					$this->inbox->addCritical("Instamojo Authoirization Error","Please contact to instamojo for troubleshooting. ".$e->getMessage());
+					$this->inbox->addCritical("Instamojo Authorization Error","Please contact to instamojo for troubleshooting. ".$e->getMessage());
 				}
 				$this->logger->info(print_r($e->getResponse(),true)."");
 				$method_data['errors'] = $e->getErrors();			

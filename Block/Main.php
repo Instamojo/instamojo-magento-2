@@ -108,20 +108,20 @@ class Main extends  \Magento\Framework\View\Element\Template
 					$this->checkoutSession->setPaymentRequestId($response->order->id);		
 				}
 			}catch(\CurlException $e){
-				// handle exception releted to connection to the sever
+				// handle exception related to connection to the sever
 				$this->logger->info((string)$e);
 				$method_data['errors'][] = $e->getMessage();
 			}catch(\ValidationException $e){
-				// handle exceptions releted to response from the server.
+				// handle exceptions related to response from the server.
 				$this->logger->info($e->getMessage()." with ");
 				if(stristr($e->getMessage(),"Authorization"))
 				{
-					$inbox->addCritical("Instamojo Authoirization Error",$e->getMessage());
+					$inbox->addCritical("Instamojo Authorization Error",$e->getMessage());
 				}
 				$this->logger->info(print_r($e->getResponse(),true)."");
 				$method_data['errors'] = $e->getErrors();			
 			}catch(\Exception $e)
-			{ // handled common exception messages which will not caught above.
+			{ // handled common exception messages which will not get caught above.
 				$method_data['errors'][] = $e->getMessage();
 				$this->logger->info('Error While Creating Order : ' . $e->getMessage());
 			}
