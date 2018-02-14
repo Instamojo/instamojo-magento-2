@@ -1,7 +1,7 @@
 <?php
 /**
  * ValidationException
- * - used to generate the exception releted to validation which raised when response
+ * - used to generate the exception related to validation which raised when response
  *   from instamojo server is not as desired.
  *   used to throw the Validation errors at the time of creating order.
  *	 used to throw the authentication failed errors.

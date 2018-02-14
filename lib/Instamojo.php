@@ -4,8 +4,8 @@
  * used to manage Instamojo API calls
  * 
  */
-include __DIR__ . DIRECTORY_SEPARATOR . "curl.php";
-include __DIR__ . DIRECTORY_SEPARATOR . "ValidationException.php";
+include_once __DIR__ . DIRECTORY_SEPARATOR . "curl.php";
+include_once __DIR__ . DIRECTORY_SEPARATOR . "ValidationException.php";
 
 use \ValidationException as ValidationException;
 use \Exception as Exception;
@@ -79,7 +79,7 @@ Class Instamojo
 					$errors[] =$v[0];
 			}
 			if($errors)
-				throw new ValidationException("Validation Error Occured with following Errors : ",$errors,$result);
+				throw new ValidationException("Validation Error Occurred with following Errors : ",$errors,$result);
 		}
 	}
 	

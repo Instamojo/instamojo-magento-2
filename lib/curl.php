@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__. DIRECTORY_SEPARATOR . "CurlException.php";
+include_once __DIR__. DIRECTORY_SEPARATOR . "CurlException.php";
 
 use \CurlException as CurlException;
 use \Exception as Exception;
@@ -57,7 +57,7 @@ class Curl
 	public function setReferer($referer)
 	{
 		$this->referer = $referer;
-		curl_setopt($this->ch, CURLOPT_REFERER  , $this->referrer);
+		curl_setopt($this->ch, CURLOPT_REFERER  , $this->referer);
 		
 	}
 
